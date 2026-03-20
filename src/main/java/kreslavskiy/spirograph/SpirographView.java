@@ -12,7 +12,7 @@ public class SpirographView extends JComponent
         return spirographModel;
     }
 
-    void setSpirographModel (SpirographModel spirograph)
+    void setSpirographModel(SpirographModel spirograph)
     {
         this.spirographModel = spirograph;
         repaint();

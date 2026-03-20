@@ -67,6 +67,7 @@ public class SpirographFrame extends JFrame
         //can add a Runnable later to animate it
 
     }
+
     static void main(String[] args)
     {
         SpirographFrame frame = new SpirographFrame();

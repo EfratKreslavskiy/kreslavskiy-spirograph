@@ -50,11 +50,11 @@ public class SpirographModel
             return false;
         }
         SpirographModel spiro = (SpirographModel) o;
-        return largeRadius  == spiro.largeRadius &&
-               smallRadius  == spiro.smallRadius &&
-               penDistance  == spiro.penDistance &&
-               numSteps     == spiro.numSteps    &&
-               Double.compare(anglePerStep,  spiro.anglePerStep) == 0;
+        return largeRadius  == spiro.largeRadius
+            && smallRadius  == spiro.smallRadius
+            && penDistance  == spiro.penDistance
+            && numSteps     == spiro.numSteps
+            && Double.compare(anglePerStep,  spiro.anglePerStep) == 0;
 
     }
 }
