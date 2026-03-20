@@ -52,7 +52,6 @@ public class SpirographFrame extends JFrame
         constraints.gridy = 4;
         add(anglePerStep, constraints);
 
-        SpirographView spirographView = new SpirographView();
         constraints = new GridBagConstraints();
         constraints.gridx = 2;
         constraints.gridy = 0;
@@ -60,6 +59,7 @@ public class SpirographFrame extends JFrame
         constraints.weightx = 1;    //dont know what these two do :)
         constraints.weighty = 1;
         constraints.fill = GridBagConstraints.BOTH;
+        SpirographView spirographView = new SpirographView();
         add(spirographView, constraints);
 
         SpirographController spirographController = new SpirographController(spirographView, lRadius, sRadius,
