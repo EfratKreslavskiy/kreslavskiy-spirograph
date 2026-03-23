@@ -26,11 +26,11 @@ public class SpirographController
     {
         SpirographModel spiro = new SpirographModel(lgRad, smRad, penDist, steps, angle);
         spirographView.setSpirographModel(spiro);
-        lRadius.setText("LgRadius: "          + String.valueOf(lgRad));
-        sRadius.setText("SmRadius: "          + String.valueOf(smRad));
-        penDistance.setText("PenDistance: "   + String.valueOf(penDist));
-        numSteps.setText("NumSteps: "         + String.valueOf(steps));
-        anglePerStep.setText("AnglePerStep: " + String.valueOf(angle));
+        lRadius.setText(String.valueOf(lgRad));
+        sRadius.setText(String.valueOf(smRad));
+        penDistance.setText(String.valueOf(penDist));
+        numSteps.setText(String.valueOf(steps));
+        anglePerStep.setText(String.valueOf(angle));
 
         spirographView.repaint();
     }

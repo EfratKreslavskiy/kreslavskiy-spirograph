@@ -2,6 +2,7 @@ package kreslavskiy.spirograph;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class SpirographFrame extends JFrame
 {
@@ -22,35 +23,73 @@ public class SpirographFrame extends JFrame
 
         GridBagConstraints constraints;
 
-        lRadius = new JTextField("LgRadius: 200");
+        JLabel lRadiusLabel = new JLabel("Lg Radius:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 0;
+        add(lRadiusLabel, constraints);
+
+        lRadius = new JTextField("200");
+        constraints = new GridBagConstraints();
+        constraints.gridx = 1;
+        constraints.gridy = 0;
         add(lRadius, constraints);
 
-        sRadius = new JTextField("SmRadius: 75");
+        JLabel sRadiusLabel = new JLabel("Sm Radius:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 1;
+        add(sRadiusLabel, constraints);
+
+        sRadius = new JTextField("75");
+        constraints = new GridBagConstraints();
+        constraints.gridx = 1;
+        constraints.gridy = 1;
         add(sRadius, constraints);
 
-        penDistance = new JTextField("PenDistance: 55");
+        JLabel pdLabel = new JLabel("Pen Distance:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 2;
+        add(pdLabel, constraints);
+
+        penDistance = new JTextField("55");
+        constraints = new GridBagConstraints();
+        constraints.gridx = 1;
+        constraints.gridy = 2;
         add(penDistance, constraints);
 
-        numSteps = new JTextField("NumSteps: 8000");
+        JLabel stepsLabel = new JLabel("No. Steps:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 3;
+        add(stepsLabel, constraints);
+
+        numSteps = new JTextField("8000");
+        constraints = new GridBagConstraints();
+        constraints.gridx = 1;
+        constraints.gridy = 3;
         add(numSteps, constraints);
 
-        anglePerStep = new JTextField("AnglePerStep: 0.007");
+        JLabel apsLabel = new JLabel("Angle Per Step:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 4;
+        add(apsLabel, constraints);
+
+        anglePerStep = new JTextField("0.007");
+        constraints = new GridBagConstraints();
+        constraints.gridx = 1;
+        constraints.gridy = 4;
         add(anglePerStep, constraints);
+
+        JButton button = new JButton("Draw");
+        constraints = new GridBagConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 5;
+        constraints.gridwidth = 2;
+        constraints.anchor = GridBagConstraints.NORTH;
+        add(button, constraints);
 
         constraints = new GridBagConstraints();
         constraints.gridx = 2;
@@ -64,6 +103,20 @@ public class SpirographFrame extends JFrame
 
         SpirographController spirographController = new SpirographController(spirographView, lRadius, sRadius,
                                                                                 penDistance, numSteps, anglePerStep);
+        button.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+               spirographController.updateSpirograph(Integer.parseInt(lRadius.getText()),
+                                                     Integer.parseInt(sRadius.getText()),
+                                                     Integer.parseInt(penDistance.getText()),
+                                                     Integer.parseInt(numSteps.getText()),
+                                                     Double.parseDouble(anglePerStep.getText()));
+            }
+
+        });
+
         //can add a Runnable later to animate it
 
     }
