@@ -33,7 +33,7 @@ public class SpirographView extends JComponent
         g.setColor(Color.MAGENTA);
         g.translate(getWidth()/2, getHeight()/2); //moves origin to middle of page
 
-        for(int i=0; i<sm.getNumSteps(); i++)
+        for (int i = 0; i < sm.getNumSteps(); i++)
         {
             time = i * sm.getAnglePerStep();
             double lr = sm.getLargeRadius();

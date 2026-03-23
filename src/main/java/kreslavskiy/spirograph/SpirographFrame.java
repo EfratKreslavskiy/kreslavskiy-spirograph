@@ -23,72 +23,72 @@ public class SpirographFrame extends JFrame
 
         GridBagConstraints constraints;
 
-        JLabel lRadiusLabel = new JLabel("Lg Radius:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 0;
+        JLabel lRadiusLabel = new JLabel("Lg Radius:");
         add(lRadiusLabel, constraints);
 
-        lRadius = new JTextField("200");
         constraints = new GridBagConstraints();
         constraints.gridx = 1;
         constraints.gridy = 0;
+        lRadius = new JTextField("200");
         add(lRadius, constraints);
 
-        JLabel sRadiusLabel = new JLabel("Sm Radius:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 1;
+        JLabel sRadiusLabel = new JLabel("Sm Radius:");
         add(sRadiusLabel, constraints);
 
-        sRadius = new JTextField("75");
         constraints = new GridBagConstraints();
         constraints.gridx = 1;
         constraints.gridy = 1;
+        sRadius = new JTextField("75");
         add(sRadius, constraints);
 
-        JLabel pdLabel = new JLabel("Pen Distance:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 2;
+        JLabel pdLabel = new JLabel("Pen Distance:");
         add(pdLabel, constraints);
 
-        penDistance = new JTextField("55");
         constraints = new GridBagConstraints();
         constraints.gridx = 1;
         constraints.gridy = 2;
+        penDistance = new JTextField("55");
         add(penDistance, constraints);
 
-        JLabel stepsLabel = new JLabel("No. Steps:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 3;
+        JLabel stepsLabel = new JLabel("No. Steps:");
         add(stepsLabel, constraints);
 
-        numSteps = new JTextField("8000");
         constraints = new GridBagConstraints();
         constraints.gridx = 1;
         constraints.gridy = 3;
+        numSteps = new JTextField("8000");
         add(numSteps, constraints);
 
-        JLabel apsLabel = new JLabel("Angle Per Step:");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 4;
+        JLabel apsLabel = new JLabel("Angle Per Step:");
         add(apsLabel, constraints);
 
-        anglePerStep = new JTextField("0.007");
         constraints = new GridBagConstraints();
         constraints.gridx = 1;
         constraints.gridy = 4;
+        anglePerStep = new JTextField("0.007");
         add(anglePerStep, constraints);
 
-        JButton button = new JButton("Draw");
         constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 5;
         constraints.gridwidth = 2;
         constraints.anchor = GridBagConstraints.NORTH;
+        JButton button = new JButton("Draw");
         add(button, constraints);
 
         constraints = new GridBagConstraints();
