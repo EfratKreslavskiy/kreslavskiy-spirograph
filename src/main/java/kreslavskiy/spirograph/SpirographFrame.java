@@ -121,6 +121,7 @@ public class SpirographFrame extends JFrame
 
     }
 
+
     static void main(String[] args)
     {
         SpirographFrame frame = new SpirographFrame();
