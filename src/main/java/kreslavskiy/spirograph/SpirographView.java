@@ -5,19 +5,19 @@ import java.awt.*;
 
 public class SpirographView extends JComponent
 {
-    private SpirographModel sm = new SpirographModel(200, 75, 55,
+    private SpirographModel model = new SpirographModel(200, 75, 55,
                                                                   8000, 0.007);
     private double time;
 
     public void setSpirographModel(SpirographModel spirograph)
     {
-        this.sm = spirograph;
+        this.model = spirograph;
         repaint();
     }
 
     public SpirographModel getSpirographModel()
     {
-        return sm;
+        return model;
     }
 
     public void setTime(double time)
@@ -33,15 +33,15 @@ public class SpirographView extends JComponent
         g.setColor(Color.MAGENTA);
         g.translate(getWidth() / 2, getHeight() / 2); //moves origin to middle of page
 
-        for (int i = 0; i < sm.getNumSteps(); i++)
+        for (int i = 0; i < model.getNumSteps(); i++)
         {
-            time = i * sm.getAnglePerStep();
-            double lr = sm.getLargeRadius();
-            double sr = sm.getSmallRadius();
-            double x = (lr - sr) * Math.cos(time) + sm.getPenDistance()
-                    * Math.cos((lr - sr) * time / sr);
-            double y = (lr - sr) * Math.sin(time) - sm.getPenDistance()
-                    * Math.sin((lr - sr) * time / sr);
+            time = i * model.getAnglePerStep();
+            double largeRadius = model.getLargeRadius();
+            double smallRadius = model.getSmallRadius();
+            double x = (largeRadius - smallRadius) * Math.cos(time) + model.getPenDistance()
+                                 * Math.cos((largeRadius - smallRadius) * time / smallRadius);
+            double y = (largeRadius - smallRadius) * Math.sin(time) - model.getPenDistance()
+                                 * Math.sin((largeRadius - smallRadius) * time / smallRadius);
             g.drawLine((int) x, (int) y, (int) x, (int) y);
 
         }

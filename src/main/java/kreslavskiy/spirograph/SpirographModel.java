@@ -2,13 +2,13 @@ package kreslavskiy.spirograph;
 
 public class SpirographModel
 {
-    private int largeRadius;
-    private int smallRadius;
-    private int penDistance;
-    private int numSteps;
+    private double largeRadius;
+    private double smallRadius;
+    private double penDistance;
+    private double numSteps;
     private double anglePerStep;
 
-    SpirographModel(int largeRadius, int smallRadius, int penDistance, int numSteps, double anglePerStep)
+    SpirographModel(double largeRadius, double smallRadius, double penDistance, double numSteps, double anglePerStep)
     {
         this.largeRadius = largeRadius;
         this.smallRadius = smallRadius;
@@ -17,12 +17,12 @@ public class SpirographModel
         this.anglePerStep = anglePerStep;
     }
 
-    public int getLargeRadius()
+    public double getLargeRadius()
     {
         return largeRadius;
     }
 
-    public int getSmallRadius()
+    public double getSmallRadius()
     {
         return smallRadius;
     }
@@ -32,7 +32,7 @@ public class SpirographModel
         return penDistance;
     }
 
-    public int getNumSteps()
+    public double getNumSteps()
     {
         return numSteps;
     }

@@ -22,15 +22,10 @@ public class SpirographController
         this.anglePerStep = anglePerStep;
     }
 
-    public void updateSpirograph(int lgRad, int smRad, int penDist, int steps, double angle)
+    public void updateSpirograph(double lgRad, double smRad, double penDist, double steps, double angle)
     {
         SpirographModel spiro = new SpirographModel(lgRad, smRad, penDist, steps, angle);
         spirographView.setSpirographModel(spiro);
-        lRadius.setText(String.valueOf(lgRad));
-        sRadius.setText(String.valueOf(smRad));
-        penDistance.setText(String.valueOf(penDist));
-        numSteps.setText(String.valueOf(steps));
-        anglePerStep.setText(String.valueOf(angle));
 
         spirographView.repaint();
     }
