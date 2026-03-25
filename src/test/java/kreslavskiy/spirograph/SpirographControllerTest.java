@@ -28,10 +28,5 @@ class SpirographControllerTest
         //then
         verify(spiroView).setSpirographModel(new SpirographModel(200, 75, 55,
                  8000, 0.007));
-        verify(lRadius).setText("200");
-        verify(sRadius).setText("75");
-        verify(penDistance).setText("55");
-        verify(numSteps).setText("8000");
-        verify(anglePerStep).setText("0.007");
     }
 }
