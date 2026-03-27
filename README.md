@@ -8,7 +8,7 @@ forming a spirograph based on given parameters.
 
 ### Screenshots
 
-![Spirograph Screenshot](\src\main\screenshots\Screenshot 2026-03-23 181454.png)
+![Spirograph Screenshot](src/main/screenshots/Screenshot.png)
 
 #### Links
 
